@@ -1,12 +1,7 @@
 services:
   - type: worker
-    name: telegram-football-bot
+    name: crossfootballbot
     env: python
-    plan: free
-    buildCommand: pip install -r requirements.txt
-    startCommand: python telegram_bot.py
-    envVars:
-      - key: TELEGRAM_BOT_TOKEN
-        value: 8369816887:AAHBgWbp8hEsuZteOs96q6f_WAMhM_HkdN4
-      - key: PREDICTION_API_BASE
-        value: https://football-prediction-api.onrender.com
+    plan: starter
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "python telegram_bot.py"
